@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>AngularJS HTML DOM</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+	</head>
+	<body>
+		<h2>AngularJS Sample Application</h2>
+		<div ng-app="" class="container" >
+		<div class="jumbotron">	
+			<h2>CREATE A SURVEY</h2>
+			<form action="" method="POST">
+				Title of survey:<input type="text" ng-model="title" class="form-control" placeholder="Enter the survey's title" size="50"><br/><br/><br/>
+				
+				
+				Enter the first question:<input type="text" class="form-control" ng-model="question1" placeholder="Enter the question here" ><br/>
+				Choose what kind of answer for the question:<br/>
+				
+				<table border="0">
+					<tr>
+						<td><input type="radio" name="choice" ng-model="kindAnswer" value="unique"></td><td>Unique answer</td>
+						<td><input type="radio" name="choice" ng-model="kindAnswer" value="multiple"></td><td>Miltiple answers</td>
+						<td><input type="radio" name="choice" ng-model="response" value="text"></td><td>anyone with their answer</td>
+					</tr>
+				</table>
+				
+					<div ng-hide="response">
+						<div ng-show="kindAnswer">
+							<table border="0">
+								<tr>
+									<td>first answer:</td><td><input type="text"  class="form-control"></td>
+								</tr>
+								<tr>
+									<td>second answer:</td><td><input type="text" class="form-control"></td>
+								</tr>
+								<tr>
+									<td>third answer:</td><td><input type="text" class="form-control"></td>
+								</tr>
+								<tr>
+									<td>fourth answer:</td><td><input type="text" class="form-control"></td>
+								</tr>
+							</table>
+						</div>	
+					</div>
+				
+			
+		</div>
+		</div>
+
+		<script
+		src="angular.min.js">
+		</script>
+	</body>
+</html>
